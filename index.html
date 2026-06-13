@@ -326,6 +326,41 @@ body{margin:0;background:#f7f5f0;}
     mask:linear-gradient(135deg, #000 52%, rgba(0,0,0,0) 80%) !important;
   }
   
+
+/*__RV_RESPONSIVE__*/
+/* ===== Mobile responsiveness ===== */
+@media (max-width: 900px){
+  #rvProtoRoot .rv-stats{ grid-template-columns:1fr 1fr !important; }
+  #rvProtoRoot .rv-props{ grid-template-columns:1fr !important; }
+  #rvProtoRoot .rv-footer .cols{ grid-template-columns:1fr 1fr !important; gap:30px !important; }
+  #rvProtoRoot .container{ padding:0 20px !important; }
+  #rvProtoRoot .rv-band .heading{ font-size:32px !important; line-height:1.1 !important; }
+}
+@media (max-width: 640px){
+  #rvProtoRoot .rv-section{ padding:40px 0 !important; }
+  /* Nav wraps and centers on small screens */
+  #rvProtoRoot .rv-nav{ flex-wrap:wrap !important; gap:14px 18px !important; justify-content:center !important; row-gap:12px !important; }
+  /* Stat cards stack one per row */
+  #rvProtoRoot .rv-stats{ grid-template-columns:1fr !important; margin-top:-60px !important; gap:16px !important; }
+  #rvProtoRoot .rv-stat{ padding:22px 20px !important; }
+  #rvProtoRoot .rv-stat .n{ font-size:34px !important; }
+  /* Hero */
+  #rvProtoRoot .rv-band{ padding:48px 0 !important; }
+  #rvProtoRoot .rv-band .heading{ font-size:28px !important; }
+  #rvProtoRoot .rv-band .pts b{ font-size:26px !important; }
+  /* Progress card padding + ticks readable */
+  #rvProtoRoot .rv-progress{ padding:24px 20px !important; }
+  #rvProtoRoot .rv-prog-top{ flex-direction:column !important; align-items:flex-start !important; }
+  #rvProtoRoot .rv-tick .nm{ font-size:9px !important; }
+  #rvProtoRoot .rv-tick .pc{ font-size:9px !important; }
+  /* Footer single column */
+  #rvProtoRoot .rv-footer .cols{ grid-template-columns:1fr !important; gap:26px !important; text-align:left !important; }
+  /* Tier table: allow horizontal scroll so it never overflows */
+  #rvProtoRoot .rv-tier-table{ display:block !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch !important; }
+  #rvProtoRoot .rv-tier-table table{ min-width:460px !important; }
+  #rvProtoRoot h2, #rvProtoRoot .rv-h2{ font-size:26px !important; }
+}
+/*__RV_RESPONSIVE_END__*/
 </style></head><body><div id="rvProtoRoot">
 <!-- ================= LOGIN ================= -->
 <div id="rvLoginView" class="hidden">
