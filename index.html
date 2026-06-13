@@ -361,6 +361,42 @@ body{margin:0;background:#f7f5f0;}
   #rvProtoRoot h2, #rvProtoRoot .rv-h2{ font-size:26px !important; }
 }
 /*__RV_RESPONSIVE_END__*/
+
+/*__RV_HAMBURGER__*/
+/* Hamburger button hidden on desktop */
+#rvProtoRoot .rv-hamburger{ display:none; background:transparent; border:0; cursor:pointer; padding:8px; width:40px; height:40px; flex-direction:column; justify-content:center; gap:5px; }
+#rvProtoRoot .rv-hamburger span{ display:block; width:24px; height:2px; background:#312d21; border-radius:2px; transition:transform .25s ease, opacity .2s ease; }
+#rvProtoRoot .rv-hamburger.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+#rvProtoRoot .rv-hamburger.open span:nth-child(2){ opacity:0; }
+#rvProtoRoot .rv-hamburger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+@media (max-width: 768px){
+  #rvProtoRoot .rv-header.solid{ position:relative; flex-wrap:nowrap; }
+  #rvProtoRoot .rv-hamburger{ display:flex; margin-left:auto; }
+  /* Collapse the nav into a dropdown panel */
+  #rvProtoRoot #rvMainNav{
+    position:absolute; top:100%; right:12px; left:12px;
+    flex-direction:column; align-items:stretch; gap:0;
+    background:#fff; border:1px solid #e3e0d8; border-radius:12px;
+    box-shadow:0 18px 40px -16px rgba(40,36,26,.35);
+    padding:6px; margin-top:8px; z-index:60;
+    max-height:0; overflow:hidden; opacity:0; pointer-events:none;
+    transform:translateY(-6px); transition:max-height .28s ease, opacity .2s ease, transform .28s ease;
+  }
+  #rvProtoRoot #rvMainNav.open{
+    max-height:380px; opacity:1; pointer-events:auto; transform:translateY(0);
+  }
+  #rvProtoRoot #rvMainNav > a,
+  #rvProtoRoot #rvMainNav > .rv-phone{
+    display:block; padding:13px 16px; border-radius:8px;
+    font-size:14px; letter-spacing:.04em; text-align:left;
+    border-bottom:1px solid #f0ede5;
+  }
+  #rvProtoRoot #rvMainNav > a:last-child,
+  #rvProtoRoot #rvMainNav > .rv-phone:last-child{ border-bottom:0; }
+  #rvProtoRoot #rvMainNav > a:hover,
+  #rvProtoRoot #rvMainNav > .rv-phone:hover{ background:#faf9f5; }
+}
+/*__RV_HAMBURGER_END__*/
 </style></head><body><div id="rvProtoRoot">
 <!-- ================= LOGIN ================= -->
 <div id="rvLoginView" class="hidden">
@@ -387,12 +423,12 @@ body{margin:0;background:#f7f5f0;}
 <div id="rvAppView" class="">
   <div class="rv-header solid">
     <div class="rv-logo"><img src="https://www.rentvail.com/images/layout/rent-vail-black-logo.png" alt="rentVAIL" style="height: 32px; width: auto; display: block;"></div>
-    <div class="rv-nav">
+    <div class="rv-nav" id="rvMainNav">
       <a>Dashboard</a><a>Rewards</a><a>Rebook</a>
       <span class="rv-phone" style="color:var(--c1)">970-476-9322</span>
       <a id="rvSignOutBtn" style="color:var(--c2)">Sign Out</a>
     </div>
-  </div>
+  <button id="rvHamburger" aria-label="Toggle menu" aria-expanded="false" class="rv-hamburger"><span></span><span></span><span></span></button></div>
 
   <!-- Member band -->
   <div class="rv-band" style="background-image: linear-gradient(rgba(40, 36, 26, 0.45), rgba(40, 36, 26, 0.55)), url(&quot;https://rentvail.icnd-cdn.com/images/homeslideshow/1242-WestHaven_05.jpg&quot;); background-size: cover; background-position: center center;">
@@ -681,4 +717,27 @@ body{margin:0;background:#f7f5f0;}
     -webkit-mask:linear-gradient(135deg, #000 52%, rgba(0,0,0,0) 80%) !important;
     mask:linear-gradient(135deg, #000 52%, rgba(0,0,0,0) 80%) !important;
   }
-  </style></div></body></html>
+  </style></div>
+<!--__RV_HAM_JS__-->
+<script>
+(function(){
+  function ready(fn){ if(document.readyState!='loading'){fn();} else {document.addEventListener('DOMContentLoaded',fn);} }
+  ready(function(){
+    var btn=document.getElementById('rvHamburger');
+    var nav=document.getElementById('rvMainNav');
+    if(!btn||!nav) return;
+    function setOpen(o){
+      nav.classList.toggle('open',o);
+      btn.classList.toggle('open',o);
+      btn.setAttribute('aria-expanded', o?'true':'false');
+    }
+    btn.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!nav.classList.contains('open')); });
+    // close when a nav link is tapped
+    nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+    // close when tapping outside
+    document.addEventListener('click', function(e){ if(nav.classList.contains('open') && !nav.contains(e.target) && e.target!==btn){ setOpen(false); } });
+  });
+})();
+</script>
+<!--__RV_HAM_JS_END__-->
+</body></html>
