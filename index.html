@@ -397,6 +397,21 @@ body{margin:0;background:#f7f5f0;}
   #rvProtoRoot #rvMainNav > .rv-phone:hover{ background:#faf9f5; }
 }
 /*__RV_HAMBURGER_END__*/
+
+/*__RV_OVERLAP_FIX__*/
+/* Give the open hamburger dropdown room: push stats lower on mobile */
+@media (max-width: 768px){
+  #rvProtoRoot .rv-stats{ margin-top:-30px !important; }
+}
+@media (max-width: 640px){
+  #rvProtoRoot .rv-stats{ margin-top:24px !important; }
+}
+/* All-properties grid: 4 across on desktop, responsive down */
+#rvProtoRoot .rv-props-all{ grid-template-columns:repeat(4,1fr) !important; }
+@media (max-width:1100px){ #rvProtoRoot .rv-props-all{ grid-template-columns:repeat(3,1fr) !important; } }
+@media (max-width:820px){ #rvProtoRoot .rv-props-all{ grid-template-columns:repeat(2,1fr) !important; } }
+@media (max-width:560px){ #rvProtoRoot .rv-props-all{ grid-template-columns:1fr !important; } }
+/*__RV_OVERLAP_FIX_END__*/
 </style></head><body><div id="rvProtoRoot">
 <!-- ================= LOGIN ================= -->
 <div id="rvLoginView" class="hidden">
@@ -508,7 +523,7 @@ body{margin:0;background:#f7f5f0;}
         </div>
       </div>
     </div>
-  </div>
+  </div><div class="rv-section" data-allprops="1"><div class="container"><div class="rv-sec-head"><h2>Browse All Properties</h2><p class="rv-sub">Explore every rentVAIL home — your member discount applies to all of them</p></div><div class="rv-props rv-props-all"><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/24afd253-d106-4fa4-86d8-be6ac4647c31" alt="Ptarmigan Townhomes 30" loading="lazy"></div><div class="body"><h3>Ptarmigan Townhomes 30</h3><div class="meta">3 BD · 2 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/5e387e64-774c-4445-b891-699bb8e26c71" alt="Tree Top Condo" loading="lazy"></div><div class="body"><h3>Tree Top Condo</h3><div class="meta">3 BD · 2.5 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/bc6e6e8c-f9d0-4bfd-98ad-90c59729fa10" alt="Ridgepoint 202" loading="lazy"></div><div class="body"><h3>Ridgepoint 202</h3><div class="meta">3 BD · 2.5 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/734e43fe-5737-4926-bc1e-a3cc9bb822f6" alt="Vail 21 Condo 502" loading="lazy"></div><div class="body"><h3>Vail 21 Condo 502</h3><div class="meta">2 BD · 2 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/9fa8a086-3a73-4c36-a73b-bb821b49f879" alt="Lionshead Center" loading="lazy"></div><div class="body"><h3>Lionshead Center</h3><div class="meta">4 BD · 4 BA · 10 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/58d2d086-ff52-44a6-a00e-9830eca3cf65" alt="Alpine Drive Chalet" loading="lazy"></div><div class="body"><h3>Alpine Drive Chalet</h3><div class="meta">4 BD · 4.5 BA · 12 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/17b9c4b5-984b-41e4-adb5-7b355a717888" alt="Vantage Point Condo 502" loading="lazy"></div><div class="body"><h3>Vantage Point Condo 502</h3><div class="meta">2 BD · 3 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/24afd253-d106-4fa4-86d8-be6ac4647c31" alt="Buffalo Park 3" loading="lazy"></div><div class="body"><h3>Buffalo Park 3</h3><div class="meta">3 BD · 3.5 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div></div></div></div>
 
   <!-- Checkout -->
   <div class="rv-section alt hidden" id="rvCheckoutSection">
