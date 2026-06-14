@@ -443,7 +443,7 @@ body{margin:0;background:#f7f5f0;}
       <span class="rv-phone" style="color:var(--c1)">970-476-9322</span>
       <a id="rvSignOutBtn" style="color:var(--c2)">Sign Out</a>
     </div>
-  <button id="rvHamburger" aria-label="Toggle menu" aria-expanded="false" class="rv-hamburger"><span></span><span></span><span></span></button></div>
+  <button id="rvHamburger" aria-label="Toggle menu" aria-expanded="false" class="rv-hamburger" onclick="rvToggleMenu(event)"><span></span><span></span><span></span></button></div>
 
   <!-- Member band -->
   <div class="rv-band" style="background-image: linear-gradient(rgba(40, 36, 26, 0.45), rgba(40, 36, 26, 0.55)), url(&quot;https://rentvail.icnd-cdn.com/images/homeslideshow/1242-WestHaven_05.jpg&quot;); background-size: cover; background-position: center center;">
@@ -523,16 +523,16 @@ body{margin:0;background:#f7f5f0;}
         </div>
       </div>
     </div>
-  </div><div class="rv-section" data-allprops="1"><div class="container"><div class="rv-sec-head"><h2>Browse All Properties</h2><p class="rv-sub">Explore every rentVAIL home — your member discount applies to all of them</p></div><div class="rv-props rv-props-all"><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/24afd253-d106-4fa4-86d8-be6ac4647c31" alt="Ptarmigan Townhomes 30" loading="lazy"></div><div class="body"><h3>Ptarmigan Townhomes 30</h3><div class="meta">3 BD · 2 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/5e387e64-774c-4445-b891-699bb8e26c71" alt="Tree Top Condo" loading="lazy"></div><div class="body"><h3>Tree Top Condo</h3><div class="meta">3 BD · 2.5 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/bc6e6e8c-f9d0-4bfd-98ad-90c59729fa10" alt="Ridgepoint 202" loading="lazy"></div><div class="body"><h3>Ridgepoint 202</h3><div class="meta">3 BD · 2.5 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/734e43fe-5737-4926-bc1e-a3cc9bb822f6" alt="Vail 21 Condo 502" loading="lazy"></div><div class="body"><h3>Vail 21 Condo 502</h3><div class="meta">2 BD · 2 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/9fa8a086-3a73-4c36-a73b-bb821b49f879" alt="Lionshead Center" loading="lazy"></div><div class="body"><h3>Lionshead Center</h3><div class="meta">4 BD · 4 BA · 10 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/58d2d086-ff52-44a6-a00e-9830eca3cf65" alt="Alpine Drive Chalet" loading="lazy"></div><div class="body"><h3>Alpine Drive Chalet</h3><div class="meta">4 BD · 4.5 BA · 12 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/17b9c4b5-984b-41e4-adb5-7b355a717888" alt="Vantage Point Condo 502" loading="lazy"></div><div class="body"><h3>Vantage Point Condo 502</h3><div class="meta">2 BD · 3 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/24afd253-d106-4fa4-86d8-be6ac4647c31" alt="Buffalo Park 3" loading="lazy"></div><div class="body"><h3>Buffalo Park 3</h3><div class="meta">3 BD · 3.5 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div></div></div></div>
+  </div><div class="rv-section" data-allprops="1"><div class="container"><div class="rv-sec-head"><h2>Browse All Properties</h2><p class="rv-sub">Explore every rentVAIL home - your member discount applies to all of them</p></div><div class="rv-props rv-props-all"><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/24afd253-d106-4fa4-86d8-be6ac4647c31" alt="Ptarmigan Townhomes 30" loading="lazy"></div><div class="body"><h3>Ptarmigan Townhomes 30</h3><div class="meta">3 BD · 2 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/5e387e64-774c-4445-b891-699bb8e26c71" alt="Tree Top Condo" loading="lazy"></div><div class="body"><h3>Tree Top Condo</h3><div class="meta">3 BD · 2.5 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/bc6e6e8c-f9d0-4bfd-98ad-90c59729fa10" alt="Ridgepoint 202" loading="lazy"></div><div class="body"><h3>Ridgepoint 202</h3><div class="meta">3 BD · 2.5 BA · 8 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/734e43fe-5737-4926-bc1e-a3cc9bb822f6" alt="Vail 21 Condo 502" loading="lazy"></div><div class="body"><h3>Vail 21 Condo 502</h3><div class="meta">2 BD · 2 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/9fa8a086-3a73-4c36-a73b-bb821b49f879" alt="Lionshead Center" loading="lazy"></div><div class="body"><h3>Lionshead Center</h3><div class="meta">4 BD · 4 BA · 10 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/58d2d086-ff52-44a6-a00e-9830eca3cf65" alt="Alpine Drive Chalet" loading="lazy"></div><div class="body"><h3>Alpine Drive Chalet</h3><div class="meta">4 BD · 4.5 BA · 12 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/17b9c4b5-984b-41e4-adb5-7b355a717888" alt="Vantage Point Condo 502" loading="lazy"></div><div class="body"><h3>Vantage Point Condo 502</h3><div class="meta">2 BD · 3 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div><div class="rv-prop"><div class="img-wrap"><img src="https://img.trackhs.com/600x400/https://track-pm.s3.amazonaws.com/rentvail/image/24afd253-d106-4fa4-86d8-be6ac4647c31" alt="Buffalo Park 3" loading="lazy"></div><div class="body"><h3>Buffalo Park 3</h3><div class="meta">3 BD · 3.5 BA · 6 GUESTS</div><button class="btn rv-rebook">Book</button></div></div></div></div></div>
 
   <!-- Checkout -->
   <div class="rv-section alt hidden" id="rvCheckoutSection">
     <div class="container">
       <div class="rv-sec-head"><div class="heading">Confirm Your Rebooking</div><span class="subhead">Gold member savings applied</span></div>
       <div class="rv-checkout">
-        <div class="rv-line"><span id="coName">—</span><span id="coRate">—</span></div>
-        <div class="rv-line"><span>Gold member discount (15%)</span><span class="disc" id="coDisc">—</span></div>
-        <div class="rv-line tot"><span>Total per night</span><span id="coTotal">—</span></div>
+        <div class="rv-line"><span id="coName"></span><span id="coRate"></span></div>
+        <div class="rv-line"><span>Gold member discount (15%)</span><span class="disc" id="coDisc"></span></div>
+        <div class="rv-line tot"><span>Total per night</span><span id="coTotal"></span></div>
         <button class="btn" style="width:100%;text-align:center;margin-top:22px;" id="rvConfirmBtn">Confirm Booking</button>
       </div>
     </div>
@@ -552,7 +552,7 @@ body{margin:0;background:#f7f5f0;}
 </div>
 <div class="rv-toast" id="rvToast"></div>
 <style id="rvRevampStyle">
-  /* ===== rentVAIL Vail Regulars — Revamp (brand palette only) ===== */
+  /* ===== rentVAIL Vail Regulars  -  Revamp (brand palette only) ===== */
   #rvProtoRoot{ --c-gold:#b8a888; --c-gold-d:#9c8c6a; }
 
   /* Soften the whole canvas */
@@ -735,31 +735,34 @@ body{margin:0;background:#f7f5f0;}
   </style></div>
 <!--__RV_HAM_JS__-->
 <script>
+function rvToggleMenu(e){
+  if(e){ e.stopPropagation(); }
+  var btn=document.getElementById("rvHamburger");
+  var nav=document.getElementById("rvMainNav");
+  if(!btn||!nav) return;
+  var band=document.querySelector(".rv-band");
+  var willOpen=!nav.classList.contains("open");
+  nav.classList.toggle("open",willOpen);
+  btn.classList.toggle("open",willOpen);
+  btn.setAttribute("aria-expanded", willOpen?"true":"false");
+  if(band){
+    if(willOpen){ var h=0; for(var i=0;i<nav.children.length;i++){ h+=nav.children[i].getBoundingClientRect().height; } band.style.marginTop=(Math.ceil(h)+28)+"px"; }
+    else { band.style.marginTop=""; }
+  }
+}
 (function(){
-  function ready(fn){ if(document.readyState!="loading"){fn();} else {document.addEventListener("DOMContentLoaded",fn);} }
-  ready(function(){
+  function init(){
     var btn=document.getElementById("rvHamburger");
     var nav=document.getElementById("rvMainNav");
     if(!btn||!nav) return;
     var band=document.querySelector(".rv-band");
-    function menuNaturalHeight(){
-      // measure children stacked height regardless of max-height/transition
-      var h=0; for(var i=0;i<nav.children.length;i++){ h+=nav.children[i].getBoundingClientRect().height; }
-      // add the panel padding (12px top+bottom)
-      return Math.ceil(h)+16;
-    }
-    function setOpen(o){
-      nav.classList.toggle("open",o);
-      btn.classList.toggle("open",o);
-      btn.setAttribute("aria-expanded", o?"true":"false");
-      if(band){ band.style.marginTop = o ? (menuNaturalHeight()+12)+"px" : ""; }
-    }
-    btn.addEventListener("click", function(e){ e.preventDefault(); e.stopPropagation(); setOpen(!nav.classList.contains("open")); });
-    nav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setOpen(false); }); });
-    document.addEventListener("click", function(e){ if(nav.classList.contains("open") && !nav.contains(e.target) && !btn.contains(e.target) && e.target!==btn){ setOpen(false); } });
-    window.addEventListener("resize", function(){ if(window.innerWidth>768){ setOpen(false); if(band) band.style.marginTop=""; } });
-  });
+    function close(){ if(nav.classList.contains("open")){ nav.classList.remove("open"); btn.classList.remove("open"); btn.setAttribute("aria-expanded","false"); if(band) band.style.marginTop=""; } }
+    nav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", close); });
+    document.addEventListener("click", function(ev){ if(!nav.classList.contains("open")) return; if(btn.contains(ev.target)||nav.contains(ev.target)) return; close(); });
+    window.addEventListener("resize", function(){ if(window.innerWidth>768) close(); });
+  }
+  if(document.readyState!=="loading"){ init(); } else { document.addEventListener("DOMContentLoaded", init); }
 })();
-<\/script>
+</script>
 <!--__RV_HAM_JS_END__-->
 </body></html>
